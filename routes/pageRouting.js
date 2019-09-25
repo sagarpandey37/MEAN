@@ -2,12 +2,12 @@ app.config(function ($routeProvider, $locationProvider, ONEWAY, ROUNDTRIP, MULTI
     $locationProvider.hashPrefix('');
     $routeProvider.when(ONEWAY, {
         templateUrl: "./views/oneWay.html",
-        controller: ""
+        controller: "xoloCarController"
     }).when(ROUNDTRIP, {
-        templateUrl: "../views/roundTrip.html",
+        templateUrl: "./views/roundTrip.html",
         controller: ""
     }).when(MULTICITY, {
-        templateUrl: "../views/multiCity.html",
+        templateUrl: "./views/multiCity.html",
         controller: ""
     }).otherwise({
         template: "Error Page , No Match Found",

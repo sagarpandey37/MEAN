@@ -2,7 +2,7 @@ app.factory("xoloCarfactory", function ($http, $q, $window) {
 
     var Object = {
 
-        get: function () {
+        sendData: function () {
             var deferred = $q.defer();
             $http({
                     url: Url.twoWayTrip,
