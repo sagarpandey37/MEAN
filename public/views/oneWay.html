@@ -4,25 +4,25 @@
    <form class="border border-primary rounded form-outer">
     <div class="form-row">
         <div class="col">
-            <input type="text" class="form-control" placeholder="Select Origin">
+            <input type="text" class="form-control" placeholder="Select Origin" ng-model="origin" disabled="disabled">
         </div>
         <div class="col">
-            <input type="text" class="form-control" placeholder="Select Destination">
+            <input type="text" class="form-control" placeholder="Select Destination" ng-model="destination">
         </div>
         <div class="col">
             <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
             <div flex-gt-xs>
-                <md-datepicker ng-model="ctrl.myDate" md-placeholder="Depart date"></md-datepicker>
+                <md-datepicker ng-model="DepartDate" md-min-date="minDate" md-placeholder="Depart date"></md-datepicker>
             </div>
         </div>
         <div class="col">
             <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
             <div flex-gt-xs>
-                <md-datepicker ng-model="ctrl.myDate" md-placeholder="Return date"></md-datepicker>
+                <md-datepicker ng-model="ReturnDate" md-min-date="minDate" md-placeholder="Return date"></md-datepicker>
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Book</button>
+        <button type="submit" class="btn btn-primary" ng-click="sendData()">Book</button>
     </div>
 </form>
  </div>
