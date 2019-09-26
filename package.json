@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/sagarpandey37/MEAN/issues"
   },
-  "homepage": "https://github.com/sagarpandey37/MEAN#readme"
+  "homepage": "https://github.com/sagarpandey37/MEAN#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
 }

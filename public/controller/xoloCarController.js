@@ -7,7 +7,7 @@ app.controller("xoloCarController", function ($scope, moment, $mdDateLocale, xol
         let departDateInput = moment($scope.DepartDate).format('YYYY-MM-DD')
         let returnDateInput =  moment($scope.ReturnDate).format('YYYY-MM-DD')
         
-        let promise = xoloCarfactory.postBookingDetails($scope.origin,$scope.destination,departDateInput,returnDateInput);
+        let promise = xoloCarfactory.postBookingDetails($scope.origin,$scope.destination,departDateInput);
 
         promise.then(success, error);
 

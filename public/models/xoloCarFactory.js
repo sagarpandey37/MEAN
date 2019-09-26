@@ -1,23 +1,21 @@
 app.factory("xoloCarfactory", function ($http, $q, $window) {
     
     class Usersbooking{
-        constructor(origin,destination,departDate,returnDate){
+        constructor(origin,destination,departDate){
             this.origin = origin;
             this.destination = destination;
             this.departDate = departDate;
-            this.returnDate = returnDate;
             
         }
     }
 
     var Object = {
 
-        postBookingDetails: function (origin,destination,departDate,returnDate) {
-            var object = new Usersbooking(origin,destination,departDate,returnDate);
-            console.log(object)
+        postBookingDetails: function (origin,destination,departDate) {
+            var object = new Usersbooking(origin,destination,departDate);
             var deferred = $q.defer();
             $http({
-                    url: Url.twoWayTrip,
+                    url: Url.oneWayTrip,
                     method: 'post',
                     data: object,
                     headers: {
