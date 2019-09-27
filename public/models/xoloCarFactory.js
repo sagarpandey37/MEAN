@@ -8,6 +8,15 @@ app.factory("xoloCarfactory", function ($http, $q, $window) {
             
         }
     }
+    
+    class Createusersinfo{
+        constructor(name,phone,email){
+            this.name = name;
+            this.phone = phone;
+            this.email = email;
+            
+        }
+    }
 
     var Object = {
         
@@ -28,7 +37,7 @@ app.factory("xoloCarfactory", function ($http, $q, $window) {
                         data
                     });
                 if(data.data){
-                    $window.location.href = '#/ONEWAY/DRIVERS'}   
+                    $window.location.href = '#/oneway/drivers'}   
                 })
                 .catch(function (err) {
 
@@ -37,6 +46,15 @@ app.factory("xoloCarfactory", function ($http, $q, $window) {
                     });
                 });
             return deferred.promise;
+        },
+        
+        redirectToLoginPage : function(){
+            $window.location.href = '#/login'
+        },
+        
+        createUser : function(name,phone,email){
+            
+            return new Createusersinfo(name,phone,email);
         }
 
     }

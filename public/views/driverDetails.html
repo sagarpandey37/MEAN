@@ -30,7 +30,7 @@
                 <td> {{drivers.destination | capitalize}}</td>
                 <td> {{drivers.carnumber}}</td>
                 <td> {{drivers.departDate}}</td>
-                <td> {{drivers.fare}}</td>
+                <td> {{drivers.fare | currency:"&#8377;"}}</td>
                 <td><button value="{{drivers.carnumber}}" type="button" class="show-related-button btn btn-info btn-arrow-right" ng-click="bookCar($event)">Book now</button></td>
             </tr>
         </tbody>

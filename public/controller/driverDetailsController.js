@@ -1,5 +1,6 @@
 app.controller("driverDetailsController", function ($scope,$localStorage,xoloCarfactory) {
     
+    
     $scope.getDriverDataFromLocalStorage = function(){
         
         $scope.DriverData = $localStorage.driverData;
@@ -12,9 +13,10 @@ app.controller("driverDetailsController", function ($scope,$localStorage,xoloCar
                 $localStorage.driverData = driverdata;               // Store selected driver by user and check for login
             }
         }
-        
-        
+        xoloCarfactory.redirectToLoginPage();
     }
+    
+    
     
     $scope.getDriverDataFromLocalStorage();
     

@@ -7,9 +7,8 @@ router.post('/oneway', function (req, resp) {
 
     let exist = true;
     for (destDetails of validatingCity) {
-        console.log(destDetails,req.body.destination.toLowerCase())
         if (destDetails.cityName.toLowerCase() == req.body.destination.toLowerCase()) {
-            bookingController.getDriverDetails(req, resp);
+            bookingController.getDriverDetailsForOne_Way(req, resp);
             exist = true;
             break;
         } 

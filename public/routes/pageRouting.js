@@ -1,4 +1,4 @@
-app.config(function ($routeProvider, $locationProvider, ONEWAY, ROUNDTRIP, MULTICITY,DRIVER_DEATILS) {
+app.config(function ($routeProvider, $locationProvider, ONEWAY, ROUNDTRIP, MULTICITY, DRIVER_DEATILS, LOGIN, PAYMENT) {
     $locationProvider.hashPrefix('');
     $routeProvider.when(ONEWAY, {
         templateUrl: "./views/oneWay.html",
@@ -12,6 +12,12 @@ app.config(function ($routeProvider, $locationProvider, ONEWAY, ROUNDTRIP, MULTI
     }).when(MULTICITY, {
         templateUrl: "./views/multiCity.html",
         controller: ""
+    }).when(LOGIN, {
+        templateUrl: "./views/loginPage.html",
+        controller: "userLoginController"
+    }).when(PAYMENT, {
+        templateUrl: "./views/paymentPage.html",
+        controller: "paymentController"
     }).otherwise({
         template: "Error Page , No Match Found",
         redirectTo: "/"

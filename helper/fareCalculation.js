@@ -7,7 +7,7 @@ var fareCalculations = {
         for (destDetails of destinationFare) {
 
             if (destDetails.cityName.toLowerCase() == destinationName.toLowerCase()) {
-                return destDetails.fare
+                return destDetails.fixedFare;
             }
         }
     },
