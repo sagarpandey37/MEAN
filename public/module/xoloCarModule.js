@@ -1,1 +1,1 @@
-const app = angular.module('XoloCarModule',['ngRoute','ngMaterial', 'ngMessages','angularMoment']);
+const app = angular.module('XoloCarModule',['ngRoute','ngMaterial', 'ngMessages','angularMoment','ngStorage']);

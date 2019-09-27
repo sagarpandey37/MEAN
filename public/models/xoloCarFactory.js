@@ -10,7 +10,9 @@ app.factory("xoloCarfactory", function ($http, $q, $window) {
     }
 
     var Object = {
-
+        
+        driverDataFromServer : [],
+        
         postBookingDetails: function (origin,destination,departDate) {
             var object = new Usersbooking(origin,destination,departDate);
             var deferred = $q.defer();
@@ -22,10 +24,11 @@ app.factory("xoloCarfactory", function ($http, $q, $window) {
                         'Content-Type': 'application/json'
                     }
                 }).then(function (data) {
-
                     deferred.resolve({
                         data
                     });
+                if(data.data){
+                    $window.location.href = '#/ONEWAY/DRIVERS'}   
                 })
                 .catch(function (err) {
 
