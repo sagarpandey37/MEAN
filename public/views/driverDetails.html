@@ -1,41 +1,34 @@
 <div class="container">
-<link rel="stylesheet" href="./css/driver.css">
-<center>
-    <h1 class="flash">Drivers available in your area..</h1>
-<!--
-    <input type="text" placeholder="search Items" ng-model="searchItems"> &nbsp; &nbsp;
-    <span>Filter</span> <select ng-model="sortby">
-		<option value="name" >Sort by Name</option>    
-		<option value="price" >Sort by Price</option>
-	</select>
--->
-    <table border="2">
-        <thead>
-            <tr>
-                <th>Cartype</th>
-                <th>Name</th>
-                <th>Origin</th>
-                <th>Destination</th>
-                <th>Carnumber</th>
-                <th>departDate</th>
-                <th>fare</th>
-                <th>Availablity</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="drivers in DriverData">
-                <td><img ng-src="https://www.cars24.com/blog/wp-content/uploads/2019/07/maruti-swift-images-wallpaper-front.jpg" height="100" width="220" /></td>
-                <td> {{drivers.name}}</td>
-                <td> {{drivers.origin}}</td>
-                <td> {{drivers.destination | capitalize}}</td>
-                <td> {{drivers.carnumber}}</td>
-                <td> {{drivers.departDate}}</td>
-                <td> {{drivers.fare | currency:"&#8377;"}}</td>
-                <td><button value="{{drivers.carnumber}}" type="button" class="show-related-button btn btn-info btn-arrow-right" ng-click="bookCar($event)">Book now</button></td>
-            </tr>
-        </tbody>
-    </table>
-    {{error}}
-</center>
+	<link rel="stylesheet" href="./css/driver.css">
+	<center>
+		<h1 class="flash">Drivers available in your area..</h1>
+		<table border="2">
+			<thead>
+				<tr>
+					<th>Cartype</th>
+					<th>Name</th>
+					<th>Origin</th>
+					<th>Destination</th>
+					<th>Carnumber</th>
+					<th>departDate</th>
+					<th>fare</th>
+					<th>Availablity</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="drivers in DriverData">
+					<td><img ng-src="https://www.cars24.com/blog/wp-content/uploads/2019/07/maruti-swift-images-wallpaper-front.jpg" height="100" width="220" /></td>
+					<td> {{drivers.driverName}}</td>
+					<td> {{drivers.origin}}</td>
+					<td> {{drivers.destination | capitalize}}</td>
+					<td> {{drivers.carNumber}}</td>
+					<td> {{drivers.departDate}}</td>
+					<td> {{drivers.fare | currency:"&#8377;"}}</td>
+					<td><button value="{{drivers.carNumber}}" type="button" class="show-related-button btn btn-info btn-arrow-right" ng-click="bookCar($event)">Book now</button></td>
+				</tr>
+			</tbody>
+		</table>
+		{{error}}
+	</center>
 
 </div>

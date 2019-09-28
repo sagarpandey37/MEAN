@@ -6,22 +6,22 @@ const destinationFare = [{
     {
         "cityName": "Mumbai",
         "distanceInKM": 983,
-        "fare": 14745
+        "fixedFare": 14745
     },
     {
         "cityName": "Chennai",
         "distanceInKM": 345,
-        "fare": 5175
+        "fixedFare": 5175
     },
     {
         "cityName": "Indore",
         "distanceInKM": 1338,
-        "fare": 20070
+        "fixedFare": 20070
     },
     {
         "cityName": "Goa",
         "distanceInKM": 581,
-        "fare": 8715
+        "fixedFare": 8715
     }
 ]
 

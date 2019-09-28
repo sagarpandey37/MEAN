@@ -1,1 +1,15 @@
-<p>hello for payment</p>
+<link rel="stylesheet" href="./css/custom.css">
+<div class="container">
+
+	<form class="border border-primary form-outer">
+		<div class="form-row">
+			<div class="col">
+				<input type="text" class="form-control" placeholder="Address" ng-model="address" required>
+			</div>
+			<div class="col">
+				<input type="time" class="form-control" value='{{timeValue | date: "HH:mm"}}' min='{{timeValue | date: "HH:mm"}}' ng-model="departTime" required>
+			</div>
+			<button type="submit" class="btn btn-primary" ng-click="finalBooking()">Pay Now</button>
+		</div>
+	</form>
+</div>

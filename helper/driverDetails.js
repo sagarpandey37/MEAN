@@ -1,8 +1,8 @@
 class Driverdetails {
-    constructor(name, carnumber, cartype, fare, language, origin, destination, departDate) {
-        this.name = name;
-        this.carnumber = carnumber;
-        this.cartype = cartype;
+    constructor(driverName, carNumber, carType, fare, language, origin, destination, departDate) {
+        this.driverName = driverName;
+        this.carNumber = carNumber;
+        this.carType = carType;
         this.fare = fare;
         this.language = language;
         this.origin = origin;

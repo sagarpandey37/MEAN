@@ -1,0 +1,34 @@
+<!-- Modal HTML -->
+<link rel="stylesheet" href="../css/confirm.css">
+<div id="myModal" cl>
+	<div class="modal-dialog modal-confirm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="icon-box">
+					<i class="material-icons">&#xE876;</i>
+				</div>
+				<center>
+					<h4 class="modal-title">{{userName}}</h4>
+				</center>
+			</div>
+			<div class="modal-body">
+				<p class="text-center">Your booking has been confirmed</p>
+				<p class="text-center">Departure Date : {{Date}} </p>
+				<p class="text-center">Daparture Time : {{Time}}</p>
+				<p class="text-center">Origin         : {{Origin}}</p>
+				<p class="text-center">Destination    : {{Destination}}</p>
+				<p class="text-center">Address        : {{Address}}</p>
+				<p class="text-center">Car            : {{CarType}}</p>
+				<p class="text-center">CarNumber      : {{CarNumber}}</p>
+				<p class="text-center">Driver         : {{Driver}}</p>
+				<p class="text-center">Language       : {{Language}}</p>
+				<p class="text-center">Fare           : {{Fare | currency:"&#8377;"}}</p>
+
+
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-success btn-block" data-dismiss="modal" ng-click="goHome()">OK</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -20,7 +20,6 @@ var bookingOperations = {
         let fare_3 = fareCalculation.fareBasedOnPerKM(destination, 18),
             driver_3 = new driverDetails('driver3', 'MH-00-00-1122', 'Maruti Swift', fare_3, 'Hindi', origin, destination, departDate);
         listOfDrivers.push(driver_3);
-        console.log(listOfDrivers)
 
         resp.status(200).send(listOfDrivers);
     }
