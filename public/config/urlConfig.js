@@ -1,8 +1,8 @@
-const baseUrl = "http://localhost:9090";
+//const baseUrl = "http://localhost:9090";
 
 var Url={
     
-    oneWayTrip : baseUrl + "/aq-index/oneway",
-    twoWayTrip : baseUrl + "/aq-index/twoway",
-    MultiCity : baseUrl + "/aq-index/multicity",  
+    oneWayTrip : "/aq-index/oneway",
+    twoWayTrip : "/aq-index/twoway",
+    MultiCity :  "/aq-index/multicity",  
 }
